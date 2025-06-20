@@ -38,7 +38,7 @@ const Navbar = () => {
           </div>
           {/* Spacer */}
           <div className="flex-1" />
-          {/* Sign In / Sign Out buttons on the right */}
+          {/* Sign In / Sign Up buttons on the right */}
           <div className="hidden md:flex items-center space-x-4">
             <button className="px-8 py-2 rounded-full border border-white text-white bg-transparent hover:bg-white hover:text-black transition font-medium">
               Sign In

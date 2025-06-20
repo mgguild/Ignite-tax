@@ -7,27 +7,38 @@ const titles = [
 ];
 
 const Resources: React.FC = () => {
-  const [currentTitle, setCurrentTitle] = useState(0);
-  const [displayed, setDisplayed] = useState("");
-  const [charIndex, setCharIndex] = useState(0);
+  const [displayed, setDisplayed] = useState(["", ""]);
+  const [charIndexes, setCharIndexes] = useState([0, 0]);
 
   useEffect(() => {
-    if (charIndex < titles[currentTitle].length) {
+    let done = true;
+    const newDisplayed = [...displayed];
+    const newCharIndexes = [...charIndexes];
+
+    titles.forEach((title, idx) => {
+      if (charIndexes[idx] < title.length) {
+        newDisplayed[idx] += title[charIndexes[idx]];
+        newCharIndexes[idx] += 1;
+        done = false;
+      }
+    });
+
+    if (!done) {
       const timeout = setTimeout(() => {
-        setDisplayed((prev) => prev + titles[currentTitle][charIndex]);
-        setCharIndex((prev) => prev + 1);
+        setDisplayed(newDisplayed);
+        setCharIndexes(newCharIndexes);
       }, 50);
       return () => clearTimeout(timeout);
-    } else if (currentTitle < titles.length - 1) {
-      // Pause before next title
+    } else {
+      // Pause before looping
       const pause = setTimeout(() => {
-        setCurrentTitle((prev) => prev + 1);
-        setDisplayed("");
-        setCharIndex(0);
-      }, 1200);
+        setDisplayed(["", ""]);
+        setCharIndexes([0, 0]);
+      }, 1500);
       return () => clearTimeout(pause);
     }
-  }, [charIndex, currentTitle]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [displayed, charIndexes]);
 
   return (
     <section id="resources" className="bg-[#232323] flex flex-col items-center py-12">
@@ -59,18 +70,16 @@ const Resources: React.FC = () => {
 
       {/* Blog Titles */}
       <div className="flex flex-col items-center gap-12 w-full">
-        {titles.map((_, idx) => (
+        {titles.map((title, idx) => (
           <h3
             key={idx}
             className="text-white text-3xl md:text-4xl text-center font-normal"
           >
-            {displayed}
+            {displayed[idx]}
             <span className="animate-pulse">|</span>
           </h3>
         ))}
       </div>
-
-   
     </section>
   );
 };
