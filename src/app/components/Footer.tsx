@@ -41,8 +41,14 @@ const Footer = () => {
         </div>
 
         <hr className="border-gray-400 mb-4" />
-        <div className="text-center text-white text-base">
-          Contact | Terms of Service | Privacy Policy | © IgniteTaxAI 2025
+        <div className="text-center text-white text-base space-x-2">
+          <a href="" className="hover:underline hover:text-[#eaff6a] transition">Contact</a>
+          <span>|</span>
+          <a href="#terms" className="hover:underline hover:text-[#eaff6a] transition">Terms of Service</a>
+          <span>|</span>
+          <a href="#privacy" className="hover:underline hover:text-[#eaff6a] transition">Privacy Policy</a>
+          <span>|</span>
+          © IgniteTaxAI 2025
         </div>
      </footer>
     </>

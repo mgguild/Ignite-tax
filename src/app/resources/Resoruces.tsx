@@ -69,7 +69,7 @@ const Resources: React.FC = () => {
       </div>
 
       {/* Blog Titles */}
-      <div className="flex flex-col items-center gap-12 w-full py-20">
+      <div className="flex flex-col items-center gap-12 w-full pt-20 px-4">
         {titles.map((title, idx) => (
           <h3
             key={idx}

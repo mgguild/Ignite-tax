@@ -4,7 +4,7 @@ const Privacy = () => {
   return (
     
     <section
-      id="privacy-policy"
+      id="privacy"
       className="flex sm:pl-16 pl-1 sm:pr-16 pr-1 py-24 mt-6  flex-col md:flex-row bg-gradient-to-br from-blue-200 to-pink-300 border-8 border-white ">
         
         <div className="bg-white rounded-3xl leading-10">
