@@ -41,7 +41,7 @@ const Resources: React.FC = () => {
   }, [displayed, charIndexes]);
 
   return (
-    <section id="resources" className="bg-[#232323] flex flex-col items-center py-12">
+    <section id="resources" className="bg-[#232323] flex flex-col items-center py-24">
       {/* Title and Subtitle */}
       <h2 className="text-4xl md:text-5xl text-white font-normal mb-2 pt-12">Resources</h2>
       <p className="italic text-white text-center mb-8 text-lg">
@@ -69,7 +69,7 @@ const Resources: React.FC = () => {
       </div>
 
       {/* Blog Titles */}
-      <div className="flex flex-col items-center gap-12 w-full">
+      <div className="flex flex-col items-center gap-12 w-full py-20">
         {titles.map((title, idx) => (
           <h3
             key={idx}

@@ -9,6 +9,8 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row justify-center items-center w-full mt-20 gap-8 mb-20 mx-auto max-w-6xl">
         {/* Left: Description and List */}
         <div className="flex-1 flex flex-col items-start">
+          <h1 className="text-[#eaff6a] text-3xl font-bold mb-2 py-4">Soon...</h1>
+
           <p className="italic text-white text-xl text-center md:text-left mb-6">
             Experience firsthand how IgniteTaxAI can revolutionize your tax workflow. Request a demo today to:
           </p>
@@ -29,11 +31,14 @@ const Footer = () => {
         </div>
         {/* Right: Call to Action Button */}
         <div className="flex-1 flex justify-center items-center">
-          <button className="bg-black rounded-full px-10 py-5 text-[#eaff6a] text-xl font-normal shadow-lg hover:bg-[#222] transition">
+          <button
+            disabled
+            className="bg-gray-900 rounded-full px-10 py-5 text-[#eaff6a] text-xl font-normal shadow-lg opacity-60 cursor-not-allowed"
+            >
             Schedule your free demo now!
           </button>
+          </div>
         </div>
-      </div>
 
         <hr className="border-gray-400 mb-4" />
         <div className="text-center text-white text-base">

@@ -40,12 +40,17 @@ const Navbar = () => {
           <div className="flex-1" />
           {/* Sign In / Sign Up buttons on the right */}
           <div className="hidden md:flex items-center space-x-4">
-            <button className="px-8 py-2 rounded-full border border-white text-white bg-transparent hover:bg-white hover:text-black transition font-medium">
+            <a
+              href="https://app--taxai-pro-b398ec5f.base44.app/login?from_url=https://app--taxai-pro-b398ec5f.base44.app/?fbclid=IwY2xjawLFrn1leHRuA2FlbQIxMABicmlkETFwUGtEQTg4ODNneGxmZ25YAR59fEuWqOkGaKjxJJxi_3tQzbpsqbKzqu2sMwuoxnYdeCAKh_cC7v2hAMJCLg_aem_lwuzbSe-zbWyVLFPt8p6jg&app_id=6856685cef268de0b398ec5f"
+              className="px-8 py-2 rounded-full border border-white text-white bg-transparent hover:bg-yellow-300 hover:text-black transition font-medium"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Sign In
-            </button>
-            <button className="px-8 py-2 rounded-full bg-[#eaff6a] text-black font-medium hover:bg-[#d4e85a] transition">
+            </a>
+            {/* <button className="px-8 py-2 rounded-full bg-[#eaff6a] text-black font-medium hover:bg-[#d4e85a] transition">
               Sign Up
-            </button>
+            </button> */}
           </div>
           {/* Hamburger for mobile */}
           <div className="md:hidden ml-auto">

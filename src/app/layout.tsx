@@ -8,6 +8,9 @@ import Footer from "./components/Footer";
 export const metadata: Metadata = {
   title: "IgniteTaxAI",
   description: "IgniteTaxAI ",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
