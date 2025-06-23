@@ -48,9 +48,6 @@ const Navbar = () => {
             >
               Sign In
             </a>
-            {/* <button className="px-8 py-2 rounded-full bg-[#eaff6a] text-black font-medium hover:bg-[#d4e85a] transition">
-              Sign Up
-            </button> */}
           </div>
           {/* Hamburger for mobile */}
           <div className="md:hidden ml-auto">
@@ -70,7 +67,7 @@ const Navbar = () => {
       </div>
       {isClick && (
         <div className="md:hidden text-center">
-          <div className="px-5 pt-5 pb-9 space-y-2">
+          <div className="px-6 pt-6 pb-10 space-y-4">
             <a href="#" className="text-white font-medium text-2xl leading-10 block transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-pink-500" onClick={closeNavbar}>
               HOME
             </a> 
@@ -80,10 +77,19 @@ const Navbar = () => {
             <a href="#product" className="text-white font-medium text-2xl leading-10 block transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-pink-500" onClick={closeNavbar}>
               PRODUCT
             </a>
-            <a href="#resouces" className="text-white font-medium text-2xl leading-10 block transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-pink-500" onClick={closeNavbar}>
+            <a href="#resources" className="text-white font-medium text-2xl leading-10 block transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-pink-500" onClick={closeNavbar}>
               RESOURCES
             </a>
-            
+            <div className="flex-1" />
+            <a
+              href="https://app--taxai-pro-b398ec5f.base44.app/login?from_url=https://app--taxai-pro-b398ec5f.base44.app/?fbclid=IwY2xjawLFrn1leHRuA2FlbQIxMABicmlkETFwUGtEQTg4ODNneGxmZ25YAR59fEuWqOkGaKjxJJxi_3tQzbpsqbKzqu2sMwuoxnYdeCAKh_cC7v2hAMJCLg_aem_lwuzbSe-zbWyVLFPt8p6jg&app_id=6856685cef268de0b398ec5f"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-1 rounded-full border border-white text-white bg-transparent hover:bg-yellow-300 hover:text-black transition font-medium"
+              onClick={closeNavbar}
+            >
+              SIGN IN
+            </a>
           </div>
         </div>
       )}
