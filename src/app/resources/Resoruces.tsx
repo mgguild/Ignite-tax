@@ -2,43 +2,41 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
-const titles = [
-  "How AI is Transforming Tax Preparation",
-  "Understanding Philippine Tax Laws",
-];
-
 const Resources: React.FC = () => {
-  const [displayed, setDisplayed] = useState(["", ""]);
-  const [charIndexes, setCharIndexes] = useState([0, 0]);
+  const title1 = "How AI is Transforming Tax Preparation";
+  const title2 = "Understanding Philippine Tax Laws";
+
+  const [displayed1, setDisplayed1] = useState("");
+  const [displayed2, setDisplayed2] = useState("");
+  const [charIndex1, setCharIndex1] = useState(0);
+  const [charIndex2, setCharIndex2] = useState(0);
 
   useEffect(() => {
-    let done = true;
-    const newDisplayed = [...displayed];
-    const newCharIndexes = [...charIndexes];
+    let timeout: NodeJS.Timeout;
 
-    titles.forEach((title, idx) => {
-      if (charIndexes[idx] < title.length) {
-        newDisplayed[idx] += title[charIndexes[idx]];
-        newCharIndexes[idx] += 1;
-        done = false;
-      }
-    });
-
-    if (!done) {
-      const timeout = setTimeout(() => {
-        setDisplayed(newDisplayed);
-        setCharIndexes(newCharIndexes);
+    if (charIndex1 < title1.length) {
+      timeout = setTimeout(() => {
+        setDisplayed1((prev) => prev + title1[charIndex1]);
+        setCharIndex1((prev) => prev + 1);
       }, 50);
-      return () => clearTimeout(timeout);
+    } else if (charIndex2 < title2.length) {
+      // Delay before starting the second line
+      timeout = setTimeout(() => {
+        setDisplayed2((prev) => prev + title2[charIndex2]);
+        setCharIndex2((prev) => prev + 1);
+      }, charIndex2 === 0 ? 700 : 50); // 700ms delay before second line starts
     } else {
-      const pause = setTimeout(() => {
-        setDisplayed(["", ""]);
-        setCharIndexes([0, 0]);
+      // Reset after a pause
+      timeout = setTimeout(() => {
+        setDisplayed1("");
+        setDisplayed2("");
+        setCharIndex1(0);
+        setCharIndex2(0);
       }, 1500);
-      return () => clearTimeout(pause);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [displayed, charIndexes]);
+
+    return () => clearTimeout(timeout);
+  }, [charIndex1, charIndex2, title1, title2]);
 
   return (
     <section id="resources" className="bg-[#232323] flex flex-col items-center py-0 relative overflow-hidden">
@@ -82,16 +80,20 @@ const Resources: React.FC = () => {
         </div>
 
         {/* Blog Titles */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-12 w-full pt-20 px-4">
-          {titles.map((title, idx) => (
-            <h3
-              key={idx}
-              className="text-white text-3xl md:text-4xl text-center font-normal"
-            >
-              {displayed[idx]}
-              <span className="animate-pulse">|</span>
-            </h3>
-          ))}
+        <div className="flex flex-col items-center gap-2 w-full pt-20 px-4 min-h-[7.5rem]">
+          <h3 className="text-white text-3xl md:text-4xl text-center font-normal">
+            {displayed1}
+            <span className="animate-pulse">|</span>
+          </h3>
+          <h3
+            className={`text-white text-3xl md:text-4xl text-center font-normal transition-opacity duration-300 ${
+              displayed1.length === title1.length ? "opacity-100" : "opacity-0"
+            }`}
+            style={{ minHeight: "2.5rem" }} // ensures space is reserved
+          >
+            {displayed2}
+            {displayed1.length === title1.length && <span className="animate-pulse">|</span>}
+          </h3>
         </div>
       </div>
 

@@ -7,12 +7,12 @@ const Product: React.FC = () => {
         <p className="text-center text-white text-lg max-w-2xl mb-10">
           IgniteTaxAI is an AI-powered assistant designed to streamline tax research, client communication, and compliance for tax professionals and businesses.
         </p>
-        <div className="w-full max-w-5xl">
+        <div className="w-full max-w-5xl mx-4 shadow-[8px_8px_32px_0px_rgba(0,0,0,0.35)] rounded-2xl">
           <h3 className="text-[#eaff6a] text-xl font-normal mb-6">Key Features:</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Feature 1 */}
             <div className="bg-gray-200 rounded-xl p-6 flex flex-col items-center transition hover:bg-[#DDF45B] hover:shadow-2xl ">
-              <div className="bg-[#1a2b1a] rounded-md p-3 mb-4 flex items-center justify-center">
+              <div className="bg-[#1a2b1a] border rounded-md p-3 mb-4 flex items-center justify-center">
                 <img src="/logo/icon-3.png" alt="Tax Research" className="w-18 h-16" />
               </div>
               <div className="text-lg font-medium text-gray-900 mb-2 text-center">Tax Research Automation:</div>
@@ -22,7 +22,7 @@ const Product: React.FC = () => {
             </div>
             {/* Feature 2 */}
             <div className="bg-gray-200 rounded-xl p-6 flex flex-col items-center transition hover:bg-[#DDF45B] hover:shadow-2xl ">
-              <div className="bg-[#A9BA43] rounded-md p-3 mb-4 flex items-center justify-center">
+              <div className="bg-[#1a2b1a] rounded-md p-3 mb-4 flex items-center justify-center">
                 <img src="/logo/icon-4.png" alt="Automate Computations" className="w-18 h-16" />
               </div>
               <div className="text-lg font-medium text-gray-900 mb-2 text-center">Automate tax computations:</div>
@@ -32,7 +32,7 @@ const Product: React.FC = () => {
             </div>
             {/* Feature 3 */}
             <div className="bg-gray-200 rounded-xl p-6 flex flex-col items-center transition hover:bg-[#DDF45B] hover:shadow-2xl ">
-              <div className="bg-[#ffe94d] rounded-md p-3 mb-4 flex items-center justify-center">
+              <div className="bg-[#1a2b1a] rounded-md p-3 mb-4 flex items-center justify-center">
                 <img src="/logo/icon-5.png" alt="Real-time Guidance" className="w-18 h-16" />
               </div>
               <div className="text-lg font-medium text-gray-900 mb-2 text-center">Real-time tax guidance:</div>
@@ -42,7 +42,7 @@ const Product: React.FC = () => {
             </div>
             {/* Feature 4 */}
             <div className="bg-gray-200 rounded-xl p-6 flex flex-col items-center transition hover:bg-[#DDF45B] hover:shadow-2xl ">
-              <div className="bg-[#558723] rounded-md p-3 mb-4 flex items-center justify-center">
+              <div className="bg-[#1a2b1a] rounded-md p-3 mb-4 flex items-center justify-center">
                 <img src="/logo/icon-9.png" alt="Client Communication" className="w-18 h-16" />
               </div>
               <div className="text-lg font-medium text-gray-900 mb-2 text-center">Client Communication:</div>
@@ -52,7 +52,7 @@ const Product: React.FC = () => {
             </div>
             {/* Feature 5 */}
             <div className="bg-gray-200 rounded-xl p-6 flex flex-col items-center transition hover:bg-[#DDF45B] hover:shadow-2xl ">
-              <div className="bg-[#232545] rounded-md p-3 mb-4 flex items-center justify-center">
+              <div className="bg-[#1a2b1a] rounded-md p-3 mb-4 flex items-center justify-center">
                 <img src="/logo/icon-1.png" alt="Compliance and Planning" className="w-18 h-16" />
               </div>
               <div className="text-lg font-medium text-gray-900 mb-2 text-center">Compliance and Planning:</div>
@@ -62,7 +62,7 @@ const Product: React.FC = () => {
             </div>
             {/* Feature 6 */}
             <div className="bg-gray-200 rounded-xl p-6 flex flex-col items-center transition hover:bg-[#DDF45B] hover:shadow-2xl ">
-              <div className="bg-[#ffe94d] rounded-md p-3 mb-4 flex items-center justify-center">
+              <div className="bg-[#1a2b1a] rounded-md p-3 mb-4 flex items-center justify-center">
                 <img src="/logo/icon-2.png" alt="Document Management" className="w-18 h-16" />
               </div>
               <div className="text-lg font-medium text-gray-900 mb-2 text-center">Document Management:</div>
