@@ -54,7 +54,7 @@ const Resources: React.FC = () => {
 
       {/* Main Content */}
       <div className="w-full flex flex-col items-center px-4 pb-24 relative ">
-        <h2 className="text-4xl md:text-5xl text-white font-normal mb-2 pt-0">Resources</h2>
+        <h2 className="text-4xl md:text-5xl text-white font-normal mb-5 pt-0">Resources</h2>
         <p className="italic text-white text-center mb-8 text-lg">
           Stay ahead in the world of taxation with IgniteTaxAI's rich resource library:
         </p>

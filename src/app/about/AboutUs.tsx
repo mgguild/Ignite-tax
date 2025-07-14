@@ -8,7 +8,7 @@ const AboutUs: React.FC = () => {
       <section id="about_us" className="bg-[#0D0D0D] text-gray-700 body-font min-h-screen w-screen">
           <div className="flex flex-col items-center justify-center bg-full bg-cover object-cover "
                 style={{
-                  // backgroundImage: "url('/backgrounds/BG_Mid.png')",
+                  backgroundImage: "url('/backgrounds/BG-About(2).png')",
                   backgroundColor: "#0D0D0D", 
                   backgroundSize: "cover",
                   backgroundPosition: "center",
@@ -23,14 +23,14 @@ const AboutUs: React.FC = () => {
             </p>
             <div className="flex flex-col md:flex-row gap-12">
               {/* Mission */}
-              <div className="bg-[#0b0e15] border border-[#232733] rounded-none px-10 py-10 w-[350px] shadow-lg">
+              <div className="bg-[#0b0e15] border border-[#262A33] rounded-none px-10 py-10 w-[350px] shadow-lg">
                 <h3 className="text-[#eaff6a] text-2xl font-bold mb-4 text-center">Mission</h3>
                 <p className="text-gray-200 text-lg text-center">
                   To simplify tax compliance and enhance productivity for tax professionals and businesses in the Philippines through cutting-edge AI-driven solutions.
                 </p>
               </div>
               {/* Vision */}
-              <div className="bg-[#0b0e15] border border-[#232733] rounded-none px-10 py-10 w-[350px] shadow-lg mb-10 mb-20 sm:mb-0">
+              <div className="bg-[#0b0e15] border border-[#262A33] rounded-none px-10 py-10 w-[350px] shadow-lg mb-10 mb-20 sm:mb-0">
                 <h3 className="text-[#eaff6a] text-2xl font-bold mb-4 text-center">Vision</h3>
                 <p className="text-gray-200 text-lg text-center">
                   To become the leading AI-powered platform transforming tax management by making compliance effortless, accurate, and efficient.

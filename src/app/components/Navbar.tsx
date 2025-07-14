@@ -26,14 +26,29 @@ const Navbar = () => {
           </div>
           {/* Navigation links - LEFT */}
           <div className="hidden md:flex items-center space-x-4 ml-8">
-            <a href="#about_us" className="text-white font-medium hover:text-yellow-300 transition" onClick={closeNavbar}>
+            <a
+              href="#about_us"
+              className="text-white font-medium hover:text-yellow-300 transition relative group"
+              onClick={closeNavbar}
+            >
               About
+              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#product" className="text-white font-medium hover:text-yellow-300 transition" onClick={closeNavbar}>
+            <a
+              href="#product"
+              className="text-white font-medium hover:text-yellow-300 transition relative group"
+              onClick={closeNavbar}
+            >
               Product
+              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#resources" className="text-white font-medium hover:text-yellow-300 transition" onClick={closeNavbar}>
+            <a
+              href="#resources"
+              className="text-white font-medium hover:text-yellow-300 transition relative group"
+              onClick={closeNavbar}
+            >
               Resources
+              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all duration-300 group-hover:w-full"></span>
             </a>
           </div>
           {/* Spacer */}
