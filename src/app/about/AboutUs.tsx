@@ -8,7 +8,7 @@ const AboutUs: React.FC = () => {
       <section id="about_us" className="bg-[#0D0D0D] text-gray-700 body-font min-h-screen w-screen">
           <div className="flex flex-col items-center justify-center bg-full bg-cover object-cover "
                 style={{
-                  backgroundImage: "url('/backgrounds/ignite-about.png')",
+                  backgroundImage: "url('/backgrounds/ignite-about-bg.png')",
                   backgroundColor: "#0D0D0D", 
                   backgroundSize: "cover",
                   backgroundPosition: "center",
