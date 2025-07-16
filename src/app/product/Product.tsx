@@ -4,7 +4,7 @@ const Product: React.FC = () => {
     return (
       <section
         id="product"
-        className="min-h-screen bg-[#0D0D0D] flex flex-col items-center pt-0 pb-20 relative overflow-hidden"
+        className="min-h-screen bg-[#0D0D0D] flex flex-col items-center pt-16 pb-20 relative overflow-hidden scroll-mt-24"
         style={{
           backgroundImage: "url('/backgrounds/AboutPage IGNITE (5).png')",
           backgroundSize: "cover",
@@ -17,13 +17,6 @@ const Product: React.FC = () => {
           IgniteTaxAI is an AI-powered assistant designed to streamline tax research, client communication, and compliance for tax professionals and businesses.
         </p>
         <div className="w-full max-w-5xl mx-4 rounded-2xl relative">
-          {/* White shadow down right */}
-          <div
-            className="absolute inset-0 pointer-events-none rounded-2xl"
-            style={{
-              boxShadow: "12px 12px 0 0 rgba(255,255,255,0.18)"
-            }}
-          />
           <h3 className="text-[#eaff6a] text-xl font-normal mb-6 relative z-0">Key Features:</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-0">
             {/* Feature 1 */}
