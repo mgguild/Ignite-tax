@@ -6,7 +6,7 @@ const Product: React.FC = () => {
         id="product"
         className="min-h-screen bg-[#0D0D0D] flex flex-col items-center pt-16 pb-20 relative overflow-hidden scroll-mt-24"
         style={{
-          backgroundImage: "url('/backgrounds/AboutPage IGNITE (5).png')",
+          backgroundImage: "url('')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
