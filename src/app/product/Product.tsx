@@ -1,17 +1,29 @@
 import React from 'react';
-import image from "next/image";
+
 const Product: React.FC = () => {
     return (
-      <section id="product" className="min-h-screen bg-[#0D0D0D] flex flex-col items-center pt-12 pb-20">
+      <section
+        id="product"
+        className="min-h-screen bg-[#0D0D0D] flex flex-col items-center pt-0 pb-20 relative overflow-hidden"
+        style={{
+          backgroundImage: "url('/backgrounds/AboutPage IGNITE (5).png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <h2 className="text-5xl font-normal text-white mb-5 pt-16 text-center">Product</h2>
         <p className="text-center text-white text-lg max-w-2xl mb-14">
           IgniteTaxAI is an AI-powered assistant designed to streamline tax research, client communication, and compliance for tax professionals and businesses.
         </p>
         <div className="w-full max-w-5xl mx-4 rounded-2xl relative">
           {/* White shadow down right */}
-          <div className="absolute inset-0 pointer-events-none rounded-2xl"
-  
-  />
+          <div
+            className="absolute inset-0 pointer-events-none rounded-2xl"
+            style={{
+              boxShadow: "12px 12px 0 0 rgba(255,255,255,0.18)"
+            }}
+          />
           <h3 className="text-[#eaff6a] text-xl font-normal mb-6 relative z-0">Key Features:</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-0">
             {/* Feature 1 */}
